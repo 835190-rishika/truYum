@@ -4,8 +4,6 @@ import java.util.List;
 
 import com.cognizant.truYum.model.MenuItem;
 
-
-
 public interface MenuItemDao {
     public List<MenuItem> getMenuItemListAdmin();
 

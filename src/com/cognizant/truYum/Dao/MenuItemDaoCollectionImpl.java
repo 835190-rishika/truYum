@@ -14,13 +14,13 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
         if (menuItemList == null || menuItemList.isEmpty()) {
             MenuItem item1 = new MenuItem(1, "Sandwitch", 99.00f, true,
                     DateUtil.convertToDate("15/03/2017"), "Main Course", true);
-            MenuItem item2 = new MenuItem(1, "Burger", 129.00f, true,
+            MenuItem item2 = new MenuItem(2, "Burger", 129.00f, true,
                     DateUtil.convertToDate("23/12/2017"), "Main Course", false);
-            MenuItem item3 = new MenuItem(1, "Pizza", 149.00f, true,
+            MenuItem item3 = new MenuItem(3, "Pizza", 149.00f, true,
                     DateUtil.convertToDate("21/08/2018"), "Main Course", false);
-            MenuItem item4 = new MenuItem(1, "Frenchfries", 57.00f, true,
+            MenuItem item4 = new MenuItem(4, "Frenchfries", 57.00f, false,
                     DateUtil.convertToDate("02/07/2017"), "Starters", true);
-            MenuItem item5 = new MenuItem(1, "Chocolate Brownie", 32.00f, true,
+            MenuItem item5 = new MenuItem(5, "Chocolate Brownie", 32.00f, true,
                     DateUtil.convertToDate("02/11/2022"), "Dessert", true);
             menuItemList = new ArrayList<MenuItem>();
             menuItemList.add(item1);
@@ -40,25 +40,34 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
 
     @Override
     public List<MenuItem> getMenuItemListCustomer() {
-        ArrayList<MenuItem>menuItems=new ArrayList<MenuItem>();
+        ArrayList<MenuItem> menuItems = new ArrayList<MenuItem>();
         for (MenuItem menuItem : menuItemList) {
-            if((menuItem.getDateOfLaunch().before(new Date())
-                    ||menuItem.getDateOfLaunch().equals(new Date()))
-                    &&menuItem.isActive()==true){menuItems.add(menuItem);
-            }  
+            if ((menuItem.getDateOfLaunch().before(new Date())
+                    || menuItem.getDateOfLaunch().equals(new Date()))
+                    && menuItem.isActive() == true) {
+                menuItems.add(menuItem);
+            }
         }
         return menuItems;
     }
 
     @Override
     public void modifyMenuItem(MenuItem menuitem) {
-        // TODO Auto-generated method stub
+        for (int i = 0; i < menuItemList.size(); i++) {
+            if (menuItemList.get(i).getId() == menuitem.getId()) {
+                menuItemList.set(i, menuitem);
+            }
+        }
 
     }
 
     @Override
     public MenuItem getMenuItem(long menuItemId) {
-        // TODO Auto-generated method stub
+        for (MenuItem menuItem : menuItemList) {
+            if (menuItem.getId() == menuItemId) {
+                return menuItem;
+            }
+        }
         return null;
     }
 }

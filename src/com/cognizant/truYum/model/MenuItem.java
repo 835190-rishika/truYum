@@ -1,5 +1,6 @@
 package com.cognizant.truYum.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MenuItem {
@@ -83,7 +84,13 @@ public class MenuItem {
         this.freeDelivery = freeDelivery;
     }
 
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+       return String.format("%-10s%-10s%-10s%-10s%-10s%-10s%s",
+               id,name,price,active==true?"yes":"No",
+                       sdf.format(dateOfLaunch),category,
+                       freeDelivery==true?"Yes":"No");
+    }
+
 }
-
-
-
