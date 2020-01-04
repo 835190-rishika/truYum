@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit-menu-Item</title>
+<link rel="shortcut icon" href="images\truyum-logo-light.png">
+<link rel="stylesheet" href="styles\style.css">
+<script type="text/javascript" src="js\script.js">
+    
+</script>
+</head>
+<body link="white">
+    <div class="fixed-header">
+        <div class="container">
+            &nbsp;&nbsp;truYum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images\truyum-logo-light.png"
+                height=30 width=30>
+        </div>
+        <div class="nav">
+            <a href="menu-item-list-admin.html">Menu</a>
+
+        </div>
+    </div>
+    </br>
+    </br>
+    </br>
+    <h1 class="edit">Edit Menu Item</h1>
+    <form name="user" action="edit-menu-item-status.html" onsubmit="return scrip()" method="post">
+        <table class="edit">
+            <tr>
+                <td><label for="name"><b>Name</b></label>
+            </tr>
+            <tr>
+                <td><input id="name" type="text" size=63 name="name" spellcheck="false"
+                    placeholder="Sandwich" /></td>
+            </tr>
+        </table>
+        <table class="edit">
+            <tr>
+                <td><label for="price"><b>Price(Rs.)</b></label></br> <input id="price" type="text"
+                    size=10 name="Price" spellcheck="false" placeholder="97" /></td>
+                <td><label><b>Active</b></label></br> <input type="radio" name="active" value="yes"
+                    / checked>Yes <input type="radio" name="active" value="no" />No</td>
+                <td></td>
+                <td></td>
+                <td><label for="date"><b>Date of Launch</b></label></br> <input id="date"
+                    type="text" size=10 name="date" spellcheck="false" placeholder="27/04/2022" /></td>
+                <td></td>
+                <td></td>
+                <td><label for=" Category"><b>Category</b></label></br> <select name="category">
+                        <option value="">Main Course</option>
+                        <option value="Starters">Starters</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="Desserts">Desserts</option>
+                        <option value="Drinks">Drinks</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><b><input type="checkbox" name="Free Delivery" value="Free Delivery"
+                        /checked>Free Delivery</b></td>
+            </tr>
+            <td><b><input type="submit"
+                    style="background-color: #29498a; color: white; width: 150px; height: 40px; border: none;"
+                    value="Save" name="save"></b></td>
+            </tr>
+        </table>
+    </form>
+    <div class="fixed-footer">
+        <div>Copyright&copy2019</div>
+    </div>
+
+</body>
+</html>

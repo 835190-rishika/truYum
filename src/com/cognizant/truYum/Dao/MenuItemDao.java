@@ -1,4 +1,4 @@
-package com.cognizant.truYum.Dao;
+package com.cognizant.truYum.dao;
 
 import java.util.List;
 

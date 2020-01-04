@@ -1,4 +1,4 @@
-package com.cognizant.truYum.Dao;
+package com.cognizant.truYum.dao;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class MenuItemDaoCollectionImplTest {
     public static void testGetMenuItemListAdmin() {
         System.out.println("Admin View");
         List<MenuItem> menu = menudao.getMenuItemListAdmin();
-        System.out.printf("%-10s%-10s%-10s%-10s%-10s%-10s%s\n", "Id", "Name", "Price", "Active",
+        System.out.printf("%-10s%-20s%-15s%-20s%-20s%-20s%s\n", "Id", "Name", "Price", "Active",
                 "Date Of Launch", "Category", "Free Delivery");
         for (MenuItem menuItem : menu) {
             System.out.println(menuItem);
@@ -30,7 +30,7 @@ public class MenuItemDaoCollectionImplTest {
     public static void testGetMenuItemListCustomer() {
         System.out.println("Customer View");
         List<MenuItem> menuItem = menudao.getMenuItemListCustomer();
-        System.out.printf("%-10s%-10s%-10s%-10s%-10s%-10s%s\n", "Id", "Name", "Price", "Active",
+        System.out.printf("%-10s%-20s%-15s%-20s%-20s%-20s%s\n", "Id", "Name", "Price", "Active",
                 "Date Of Launch", "Category", "Free Delivery");
         for (MenuItem menuItem2 : menuItem) {
             System.out.println(menuItem2);
@@ -49,7 +49,7 @@ public class MenuItemDaoCollectionImplTest {
 
     public static void testGetMenuItem() {
         System.out.println("Get Menu Item");
-        System.out.printf("%-10s%-10s%-10s%-10s%-10s%-10s%s\n", "Id", "Name", "Price", "Active",
+        System.out.printf("%-10s%-20s%-15s%-20s%-20s%-20s%s\n", "Id", "Name", "Price", "Active",
                 "Date Of Launch", "Category", "Free Delivery");
         MenuItem menuitem = menudao.getMenuItem(3);
         System.out.println(menuitem);

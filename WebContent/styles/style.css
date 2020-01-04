@@ -1,0 +1,69 @@
+/*text body for top and bottom padding*/
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+/*position,margins for navigation items*/
+.nav {
+    top: 0%;
+    position: fixed;
+    margin-left: 85%;
+    background: #29498a;
+    padding: 20px 0;
+    color: #fff;
+}
+/*link color*/
+a {
+    color: black;
+}
+/*navigation color*/
+.heading a {
+    color: #007cc9;
+}
+/*Header formatting*/
+.fixed-header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    font-family: arial;
+    font-style: regular;
+    background: #29498a;
+    padding: 15px 0;
+    color: #fff;
+}
+/*Header color*/
+.fixed-header a {
+    color: white;
+}
+/*editing*/
+.edit {
+    margin-left: 20px;
+}
+/*Result message Editing*/
+.man {
+    margin-left: 200px;
+}
+/*menu link color*/
+.menu-item-list {
+    color: #29498a;
+}
+/*footer formatting*/
+.fixed-footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    font-family: arial;
+    font-style: regular;
+    font-size: 15px;
+    background: #919aa3;
+    padding: 15px 0;
+    color: #080112;
+}
+/*body text editting*/
+.container {
+    width: 100%;
+    font-size: 25px;
+    margin: 0 auto;
+}
