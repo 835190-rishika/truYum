@@ -17,7 +17,6 @@ public class CartDaoCollectionImpl implements CartDao {
 
         }
     }
-
     @Override
     public void addCartItem(long userId, long menuItemId) {
         MenuItemDao menuItems = new MenuItemDaoCollectionImpl();
