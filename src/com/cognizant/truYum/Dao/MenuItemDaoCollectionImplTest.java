@@ -6,7 +6,7 @@ import com.cognizant.truYum.model.MenuItem;
 import com.cognizant.truYum.util.DateUtil;
 
 public class MenuItemDaoCollectionImplTest {
-   static MenuItemDao menudao = new MenuItemDaoCollectionImpl();
+    static MenuItemDao menudao = new MenuItemDaoCollectionImpl();
 
     public static void main(String[] args) {
         testGetMenuItemListAdmin();

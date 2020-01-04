@@ -52,15 +52,14 @@ public class CartDaoCollectionImpl implements CartDao {
 
     @Override
     public void removeCartItem(long userId, long menuItemId) {
-       List<MenuItem> list= userCarts.get(userId).getMenuItemList();
-      for(int i=0;i<list.size();i++) {
-          if(list.get(i).getId()==menuItemId) {
-              list.remove(i);
-              break;
-              
+        List<MenuItem> list = userCarts.get(userId).getMenuItemList();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == menuItemId) {
+                list.remove(i);
+                break;
+
+            }
         }
-    }
-       
 
     }
 
