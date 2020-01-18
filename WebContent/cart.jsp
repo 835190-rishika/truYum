@@ -19,50 +19,50 @@
             <a href="ShowCart">Cart</a>
         </div>
     </div>
-    
 
 
-        <c:set var="cart" value="${cart}"></c:set>
-        <h1>Cart</h1>
-        <c:if test="${removeCartItemStatus==true }">
-            <h4 style="color: #0b8038" id="remove-cart1" class="edit">Item Removed from Cart
-                Successfully</h4>
-        </c:if>
-        <table id="table2">
-            <col width="200px" />
-            <col width="100px" />
-            <col width="90px" />
+
+    <c:set var="cart" value="${cart}"></c:set>
+    <h1>Cart</h1>
+    <c:if test="${removeCartItemStatus==true }">
+        <h4 style="color: #0b8038" id="remove-cart1" class="edit">Item Removed from Cart
+            Successfully</h4>
+    </c:if>
+    <table id="table2">
+        <col width="200px" />
+        <col width="100px" />
+        <col width="90px" />
 
 
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Free Delivery</th>
+            <th align="right">Price</th>
+
+        </tr>
+        <c:forEach items="${menuItem}" var="menuItem">
             <tr>
-                <th align="left">Name</th>
-                <th align="left">Free Delivery</th>
-                <th align="right">Price</th>
+                <td>${menuItem.getName()}</td>
+                <td align="left"><c:choose>
+                        <c:when test="${menuItem.isFreeDelivery()==true}">Yes</c:when>
+                        <c:otherwise>No</c:otherwise>
+                    </c:choose></td>
+                <td align="right"><f:formatNumber type="currency" currencySymbol="Rs."
+                        minFractionDigits="2" value="${menuItem.getPrice()}"></f:formatNumber></td>
 
+                <td align="right"><a href="RemoveCart?menuItemId=${menuItem.getId()}">Delete</a></td>
             </tr>
-            <c:forEach items="${menuItem}" var="menuItem">
-                <tr>
-                    <td>${menuItem.getName()}</td>
-                    <td align="left"><c:choose>
-                            <c:when test="${menuItem.isFreeDelivery()==true}">Yes</c:when>
-                            <c:otherwise>No</c:otherwise>
-                        </c:choose></td>
-                    <td align="right"><f:formatNumber type="currency" currencySymbol="Rs."
-                            minFractionDigits="2" value="${menuItem.getPrice()}"></f:formatNumber></td>
-
-                    <td align="right"><a href="RemoveCart?menuItemId=${menuItem.getId()}">Delete</a></td>
-                </tr>
-            </c:forEach>
-            <tr>
-                <td></td>
-                <td align="left"><b>Total</b></td>
-                <td align="right" id="amount"><b>Rs.${cart.getTotal()}</b></td>
-            </tr>
-            </div>
-        </table>
-
-        <div class="fixed-footer">
-            <div>Copyright&copy2019</div>
+        </c:forEach>
+        <tr>
+            <td></td>
+            <td align="left"><b>Total</b></td>
+            <td align="right" id="amount"><b>Rs.${cart.getTotal()}</b></td>
+        </tr>
         </div>
+    </table>
+
+    <div class="fixed-footer">
+        <div>Copyright&copy2019</div>
+    </div>
 </body>
 </html>

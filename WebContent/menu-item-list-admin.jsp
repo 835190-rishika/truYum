@@ -23,11 +23,11 @@
 
         </div>
         <div class="container">
-           
-            <h1 >Menu Items</h1>
-            
-            
-                <td></td>
+
+            <h1>Menu Items</h1>
+
+
+            <td></td>
             </tr>
             <tr>
                 <th width=200 align="left"><b>Name</b>

@@ -21,24 +21,24 @@
         </div>
     </div>
 
-        <div class="container">
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <h1>
-                    <font ="Arial" class="edit">Edit Menu Item Status</font>
-                </h1>
-            </tr>
-            </td>
-            <tr>
-                <td><font color="#317859" size=4 class="edit"><b>Menu items details
-                            saved successfully</b></font>
-            </tr>
-            </td>
-        </div>
-    </table>
+    <div class="container">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <h1>
+                <font ="Arial" class="edit">Edit Menu Item Status</font>
+            </h1>
+        </tr>
+        </td>
+        <tr>
+            <td><font color="#317859" size=4 class="edit"><b>Menu items details
+                        saved successfully</b></font></td>
+        </tr>
+
+    </div>
+
     <div class="fixed-footer">
         <div>Copyright&copy2019</div>
     </div>
