@@ -1,12 +1,12 @@
-function scrip() {
-    var name = document.forms["user"]["name"].value;
-    var price = document.forms["user"]["price"].value;
-    var date = document.forms["user"]["date"].value;
-    var category = document.forms["user"]["category"].value;
+function validateMenuItemForm() {
+    var name = document.forms["menuItemForm"]["name"].value;
+    var price = document.forms["menuItemForm"]["price"].value;
+    var dateOfLaunch = document.forms["menuItemForm"]["dateOfLaunch"].value;
+    var category = document.forms["menuItemForm"]["category"].value;
     var regNumbers = (/^.*[0-9].*$/);
     var regSpecial = (/^.*[!#@&?].*$/);
     var regCharacters = (/^.*[a-zA-Z!#@&?].*$/);
-    var submit = document.forms["user"]["submit"].value;
+    var submit = document.forms["menuItemForm"]["submit"].value;
     if (name == "") {
         alert("Title is required");
         return false;
@@ -19,10 +19,10 @@ function scrip() {
     } else if (price == "") {
         alert("Price is required");
         return false;
-    } else if (date.match(regCharacters)) {
+    } else if (dateOfLaunch.match(regCharacters)) {
         alert("Date of Launch must contain ony numbers");
         return false;
-    } else if (date == "") {
+    } else if (dateOfLaunch == "") {
         alert("Date of launch is required");
         return false;
     } else if (category == "") {
