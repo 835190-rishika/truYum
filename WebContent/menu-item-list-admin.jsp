@@ -28,7 +28,7 @@
 
 
             <td></td>
-            </tr>
+
             <tr>
                 <th width=200 align="left"><b>Name</b>
                 <th width=100 align="right"><b>Price</b>

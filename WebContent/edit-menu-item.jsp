@@ -8,9 +8,6 @@
 <title>edit-menu-item</title>
 <link rel="shortcut icon" href="images\truyum-logo-light.png">
 <link rel="stylesheet" href="styles/style.css">
-
-
-</script>
 </head>
 <body link="white">
     <table class="edit">
